@@ -1,6 +1,6 @@
 # To-Do tracker application
 
-You can use it to track your daily to-do tasks. It runs on 3000 port. You can run as PORT=<port number> node app.js to run on custom port.
+You can use it to track your daily to-do tasks. It runs on 3000 port. You can run as PORT=< port number > node app.js to run on custom port.
 
 ## Usage:
 
