@@ -1,0 +1,25 @@
+<%- include("header"); -%>
+  <!-- Added sciplet tag of ejs to execute javascript code. It needs to be added in each line of non-html code.-->
+<div class="box" id="heading">
+  <%  if (listTitle === 'Saturday' || listTitle === 'Sunday'){ %>
+  <h1 style="color:purple;">It's a <%= listTitle %> ToDo list.</h1>
+  <h2> Remember that it's a weekend. </h2>
+  <%  } else {  %>
+  <h1>It's a <%= listTitle %> ToDo list.</h1>
+  <%  } %>
+</div>
+
+<div class="box">
+    <%   for(var i=0; i<newListItems.length; i++){ %>
+      <div class="item">
+        <input type="checkbox">
+        <p><%= newListItems[i] %></p>
+      </div>
+    <%   }   %>
+
+    <form class="item" action="/" method="post">
+      <input type="text" name="newitem" placeholder="Enter the new to-do item" autocomplete="off">
+      <button type="submit" name="list" value= <%= listTitle %>>+</button>
+    </form>
+</div>
+<%- include("footer"); -%>
